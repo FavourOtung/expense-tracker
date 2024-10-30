@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="budget.css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div>
+        <div id="sidemenu" class="sidemenu">
+            <p id="close">×</p>
+            <div class="sidemenuHeading">
+                <h4><i class="fa fa-money" aria-hidden="true"></i></h4>
+                <h2>Budget Buddy.</h2>
+            </div>
+            <ul class="sidelists">
+                <li><a href="home.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                <li><a href="Budget.html"><i class="fa fa-list-alt" aria-hidden="true"></i>Budget</a></li>
+                
+                <li><a href="About.html"><i class="fa fa-comment" aria-hidden="true"></i></i>About</a></li>
+            </ul>
+            <div class="sidemenuText"><p>Let's help you keep track of your spendings...</p></div>
+            <li class="resetli"><a href="#" id="reset">Reset</a></li>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Make your budgets here with Budget Buddy</h1>
+        <h2 id="display-income">Income: $0</h2>
+        <div class="budgetIncome">
+            <!-- <label for="income">Enter your Income:</label> -->
+            <input type="number" id="income" placeholder="Enter income">
+            <button onclick="setIncome()">Add Income</button>
+        </div>
+        
+
+        <div class="addBudgetSection">
+            <p class="budgettext">Add Your Budgets</p>
+            <input type="text" id="budget-item" placeholder="Item name">
+            <input type="number" id="budget-amount" placeholder="Amount">
+            <button onclick="addBudget()">Add Budget</button>
+        </div>
+
+        <ul id="budget-list"></ul>
+        <h2 id="remaining">Remaining: $0</h2>
+
+        <canvas id="budget-chart"></canvas>
+        <button id="reset">reset</button>
+    </div>
+    <script src="budget.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="sidemenu" class="sidemenu">
+        <p id="close">×</p>
+        <div class="sidemenuHeading">
+            <h4><i class="fa fa-money" aria-hidden="true"></i></h4>
+            <h2>Budget Buddy.</h2>
+        </div>
+        <ul class="sidelists">
+            <li><a><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+            <li><a href="Budget.html"><i class="fa fa-list-alt" aria-hidden="true"></i>Budget</a></li>
+            <li><a href="About.html"><i class="fa fa-comment" aria-hidden="true"></i></i>About</a></li>
+        </ul>
+        <div class="sidemenuText"><p>Let's help you keep track of your money...</p></div>
+        <li class="resetli"><a href="#" id="reset">Reset</a></li>
+    </div>
+    <div id="main" class="main">
+        <nav class="nav">
+            <i id="navicon" class="fa fa-bars" aria-hidden="true"></i>
+            <h3>Hi there<p>!</p></h3>
+            <ul class="navLinks">
+                <li><a href="#form">Add Transaction</a></li>
+            </ul>
+        </nav>
+        
+        <div class="balance"> 
+            <h1>Total Balance :</h1>
+            <div class="total">
+                <p>₦</p>
+                <div id="totalAmount">000</div>
+            </div>
+            
+            <!-- <div class="income" >
+                <input id="userIncome" placeholder="Enter Your Income"/>
+                <button id="add">Add</button>
+            </div> -->
+            <div class="incomeExpense">
+                <div class="income">
+                    <div class="incomeExpenseText">
+                        <p>₦ </p>
+                    <div id="incomeAmount" class="incomeAmount"> 000</div>
+                    </div>
+                    
+                    <span><p id="upArrow">↑</p>Income</span>
+                </div>
+                <div>
+                    <div class="incomeExpenseText">
+                        <p>₦ </p>
+                        <div id="expenseAmount" class="ExpenseAmount"> 000</div>
+                    </div>
+                    <span><p id="downArrow">↓</p>Expenses</span>
+                </div>
+            </div>  
+        </div>
+
+        <div class="transaction">
+            <div class="transHead">
+                <p>Transactions</p>
+                <p>See all > </p>
+            </div>
+            <ul id="transContent">
+                
+            </ul>
+        </div>
+
+        <form id="form" class="AddTransactionSection">
+            <h3>Add New Transaction !</h3>
+            <div class="transType">
+                <p>Please Select Transaction Type:</p>
+                <div class="transTypeButton">
+                    <button id="incomeType">Income +</button>
+                    <button id="expenseType">Expense -</button>
+                </div>
+            </div>
+            <input id="name" placeholder="Enter Transaction Name"/>
+            <input id="amount" placeholder="Enter TransactionAmount"/>
+            <button id="addButton">Add</button>
+        </form>
+        <footer>copyright &copy; BudgetBuddy</footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
